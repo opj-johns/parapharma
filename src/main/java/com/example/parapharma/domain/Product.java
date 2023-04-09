@@ -1,8 +1,12 @@
 package com.example.parapharma.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 
 import javax.persistence.*;
+import java.awt.image.BufferedImage;
+import java.sql.Blob;
 
 @Getter
 @Setter
@@ -11,6 +15,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
 public class Product {
 
     @Id
@@ -19,7 +24,7 @@ public class Product {
 
     private String name;
     private String description;
-    private Long qteInStock;
+    private Long qtyInStock;
     private String imageUrl;
     private float price;
 
@@ -30,5 +35,11 @@ public class Product {
     @ManyToOne
     @JoinColumn(name="supplier_id", referencedColumnName = "id")
     private Supplier supplier;
+
+    @ManyToOne
+    @JoinColumn(name = "promotion_id", referencedColumnName = "id")
+    private Category promotion;
+
+
 
 }

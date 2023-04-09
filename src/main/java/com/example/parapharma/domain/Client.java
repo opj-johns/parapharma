@@ -1,5 +1,6 @@
 package com.example.parapharma.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,22 +10,22 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.util.Date;
 
 @Entity
-@Getter
-@Setter
-@NoArgsConstructor
 @AllArgsConstructor
-public class Promotion {
+@NoArgsConstructor
+@Setter
+@Getter
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+public class Client {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String promoName;
-    private String description;
-    private String reductionPercentage;
-    private Date startDate;
-    private Date endDate;
+    private String firstName;
+    private String lastName;
+    private String email;
+    private String phone;
+    private String address;
 
 }

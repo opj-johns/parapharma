@@ -1,5 +1,6 @@
 package com.example.parapharma.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,6 +16,7 @@ import javax.persistence.Id;
 @Getter
 @Setter
 @EqualsAndHashCode
+@JsonIgnoreProperties({"hibernateLazyInitializer","handler"})
 public class Supplier {
 
     @Id
@@ -24,6 +26,5 @@ public class Supplier {
     private String email;
     private String address;
     private String tel;
-
 
 }
