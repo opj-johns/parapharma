@@ -22,7 +22,7 @@ public class ParapharmaApplication {
     public CorsFilter corsFilter() {
         CorsConfiguration corsConfiguration = new CorsConfiguration(); // create course configuration method
         corsConfiguration.setAllowCredentials(true);
-        corsConfiguration.setAllowedOrigins(Arrays.asList("http://localhost:4200", "http://localhost:52918"));
+        corsConfiguration.setAllowedOrigins(Arrays.asList("http://localhost:4200","https://parapharma-82f7f.web.app", "http://localhost:52918"));
         corsConfiguration.setAllowedHeaders(Arrays.asList("Origin",
                 "Access-Control-Allow-Origin",
                 "Content-Type",

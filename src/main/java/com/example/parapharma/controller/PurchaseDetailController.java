@@ -8,6 +8,7 @@ import com.example.parapharma.service.PurchaseDetailService;
 import com.example.parapharma.service.PurchaseService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -15,6 +16,7 @@ import java.util.Date;
 import java.util.List;
 
 @Controller
+@CrossOrigin(origins = {"http://localhost:4200", "https://parapharma-82f7f.web.app"})
 @RequestMapping("/api/purchase-detail")
 public class PurchaseDetailController {
 

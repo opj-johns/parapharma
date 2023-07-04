@@ -9,12 +9,14 @@ import com.example.parapharma.service.PaymentService;
 import com.example.parapharma.service.ShopOrderService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
 @Controller
+@CrossOrigin(origins = {"http://localhost:4200", "https://parapharma-82f7f.web.app"})
 @RequestMapping("/api/payment")
 public class PaymentController {
 

@@ -27,4 +27,5 @@ public class Supplier {
     private String address;
     private String tel;
 
+
 }

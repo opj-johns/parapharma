@@ -49,6 +49,10 @@ public class PurchaseService {
 
     }
 
+    public Purchase getPurchase(Long id){
+        return this.purchaseRepository.getReferenceById(id);
+    }
+
     public void savePurchase(Purchase purchase){
          this.purchaseRepository.save(purchase);
     }

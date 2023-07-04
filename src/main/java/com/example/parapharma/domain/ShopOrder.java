@@ -1,5 +1,4 @@
 package com.example.parapharma.domain;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 
@@ -18,7 +17,6 @@ public class ShopOrder {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private Date date;
 
     @ManyToOne

@@ -27,6 +27,7 @@ public class Product {
     private Long qtyInStock;
     private String imageUrl;
     private float price;
+    private float purchasePrice;
 
     @ManyToOne
     @JoinColumn(name = "category_id", referencedColumnName = "id")

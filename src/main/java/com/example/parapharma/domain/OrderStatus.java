@@ -20,8 +20,8 @@ public class OrderStatus {
 
     private String status;
 
-    @ManyToOne
-    @JoinColumn(name="order_id", referencedColumnName = "id")
-    private ShopOrder shopOrder;
+//    @ManyToOne
+//    @JoinColumn(name="order_id", referencedColumnName = "id")
+//    private ShopOrder shopOrder;
 
 }

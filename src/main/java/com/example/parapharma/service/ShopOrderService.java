@@ -38,10 +38,10 @@ public class ShopOrderService {
         return this.shopOrderRepository.save(shopOrder);
     }
 
-    void updateOrderStatus(OrderStatus status){
-
-        this.shopOrderRepository.findShopOrderByOrderStatus(status);
-    }
+//    void updateOrderStatus(OrderStatus status){
+//
+//        this.shopOrderRepository.findShopOrderByOrderStatus(status);
+//    }
 
     public List<Command> getCommands(){
 

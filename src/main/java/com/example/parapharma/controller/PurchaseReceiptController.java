@@ -5,10 +5,12 @@ import com.example.parapharma.domain.PurchaseReceipt;
 import com.example.parapharma.service.PurchaseReceiptService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@CrossOrigin(origins = {"http://localhost:4200", "https://parapharma-82f7f.web.app"})
 @RequestMapping("api/purchase-receipt")
 public class PurchaseReceiptController {
 

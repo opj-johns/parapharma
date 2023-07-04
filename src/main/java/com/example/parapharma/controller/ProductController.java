@@ -1,5 +1,4 @@
 package com.example.parapharma.controller;
-
 import com.example.parapharma.domain.Product;
 import com.example.parapharma.domain.ShopOrder;
 import com.example.parapharma.domain.datamodels.DialogProduct;
@@ -15,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 
 @Controller
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = {"http://localhost:4200", "https://parapharma-82f7f.web.app"})
 @RequestMapping("api/product")
 public class ProductController {
 
@@ -30,21 +29,18 @@ public class ProductController {
         List<Product> products = this.productService.getAll();
         return new ResponseEntity<>(products, HttpStatus.OK);
     }
-
     // save product
     @RequestMapping("/save")
     public ResponseEntity<Product> saveProduct(@RequestBody Product product) {
         Product savedProduct = this.productService.saveProduct(product);
         return new ResponseEntity<>(savedProduct, HttpStatus.OK);
     }
-
     // get by id
     @RequestMapping("/{id}")
     public ResponseEntity<Product> getProduct(@PathVariable Long id){
         Product product = this.productService.fetchProduct(id);
         return ResponseEntity.ok(product);
     }
-
     // delete product
     @RequestMapping("/delete")
     public ResponseEntity<?> deleteProduct(@RequestBody Product product){

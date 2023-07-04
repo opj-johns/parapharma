@@ -4,7 +4,6 @@ import com.example.parapharma.domain.Receipt;
 import com.example.parapharma.domain.ShopOrder;
 import com.example.parapharma.repository.ReceiptRepository;
 import org.springframework.stereotype.Service;
-
 @Service
 public class ReceiptService {
 
@@ -13,10 +12,7 @@ public class ReceiptService {
     public ReceiptService(ReceiptRepository receiptRepository) {
         this.receiptRepository = receiptRepository;
     }
-
-
     public Receipt saveReceipt(Receipt receipt){
-
         // check if the receipt has been saved already
         Receipt savedReceipt = this.receiptRepository.findReceiptByShopOrder(receipt.getShopOrder());
         if(savedReceipt==null){
